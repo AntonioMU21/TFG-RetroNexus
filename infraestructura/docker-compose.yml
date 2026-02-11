@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - wp_data:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: retronexus_user
+      WORDPRESS_DB_PASSWORD: superpassword
+      WORDPRESS_DB_NAME: retronexus_db
+  db:
+    image: mariadb:10.6
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: retronexus_db
+      MYSQL_USER: retronexus_user
+      MYSQL_PASSWORD: superpassword
+
+volumes:
+  wp_data:
+  db_data:
