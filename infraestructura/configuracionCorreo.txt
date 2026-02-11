@@ -1,0 +1,6 @@
+Configuración de salida de correo SMTP:
+Servidor: smtp.gmail.com
+Puerto: 587 (TLS)
+Autenticación: Sí
+Remitente: registro@retronexus.es
+Plugin utilizado: WP Mail SMTP
