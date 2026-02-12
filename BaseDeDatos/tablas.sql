@@ -1,0 +1,3 @@
+CREATE TABLE rtnx_puntuaciones ('id' int(11) NOT NULL AUTO_INCREMENT,'usuario_id' int(11) NOT NULL,'usuario_nombre' varchar(100) NOT NULL,'puntuacion' int(11) NOT NULL,'juego_id' int(11) NOT NULL, 'fecha' timestamp DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (`id`));
+
+CREATE rtnx_logros ( 'id' int(11) NOT NULL AUTO_INCREMENT, 'nombre_logro' varchar(100) NOT NULL, 'puntos_necesarios' int NOT NULL, PRIMARY KEY (id));
